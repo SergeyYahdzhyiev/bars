@@ -1,6 +1,7 @@
 @import './reset.css';
 
 @import '../assets/fonts/fonts.css';
+@import './nav-1.css';
 
 body {
   font-size: 16px;
@@ -17,6 +18,14 @@ header {
   padding: 2em;
   display: flex;
   align-items: center;
+}
+
+main {
+  padding: 1em 0;
+}
+
+nav {
+  margin: 10px 0;
 }
 
 .main-title {
@@ -42,6 +51,45 @@ header {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
+.bar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-title {
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: white;
+  margin-right: auto;
+  margin-left: 2em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.get-code-btn {
+  font-size: 1em;
+  background-color: rgb(78, 78, 194);
+  color: white;
+  border: none;
+  margin-left: auto;
+  margin-right: 2em;
+  padding: 0.8em 1.5em;
+  cursor: pointer;
+}
+
+.get-code-btn:hover {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.get-code-btn:active {
+  transform: scale(0.95);
+}
+
+.get-code-btn:focus {
+  border: none;
+  outline: none;
+}
+
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 12px;
@@ -55,10 +103,6 @@ header {
   header {
     flex-direction: column;
     justify-content: center;
-  }
-  .main-title,
-  .header-text {
-    flex: 1;
   }
   .header-text {
     text-align: center;
