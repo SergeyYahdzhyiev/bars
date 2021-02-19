@@ -3,5 +3,89 @@
 @import '../assets/fonts/fonts.css';
 
 body {
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgb(228, 187, 26) 0%,
+    rgba(213, 173, 28, 1) 29%,
+    rgba(222, 144, 0, 1) 100%
+  );
+}
+
+header {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.main-title {
+  flex: 2;
+  font-weight: 300;
+  font-size: 6em;
+  color: white;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.main-title b {
+  font-weight: 800;
+}
+
+.header-text {
+  margin-top: 1em;
+  padding-left: 1em;
+  flex: 1;
+  font-weight: 300;
+  font-size: 1.7em;
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-title,
+  .header-text {
+    flex: 1;
+  }
+  .header-text {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    font-size: 8px;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header-text {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  body {
+    font-size: 6px;
+  }
+  header {
+    justify-content: center;
+  }
+  .header-text {
+    text-align: center;
+  }
 }
