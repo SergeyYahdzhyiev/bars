@@ -1,0 +1,19 @@
+{
+  "name": "sy-navbars",
+  "version": "1.0.0",
+  "description": "Some free navbars for your sites",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html -p 3000 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeyYahdzhyiev/bars.git"
+  },
+  "author": "SY <mr.blooods@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeyYahdzhyiev/bars/issues"
+  },
+  "homepage": "https://github.com/SergeyYahdzhyiev/bars#readme"
+}
