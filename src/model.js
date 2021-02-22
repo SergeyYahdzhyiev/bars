@@ -6,6 +6,9 @@ export const model = [
     title: 'Simple Dark',
     styles: {
       nav: {
+        display: 'flex',
+        'justify-content': 'space-between',
+        'align-items': 'center',
         color: 'white',
         'background-color': 'rgb(0, 0, 0)',
         height: '10vh',
@@ -49,6 +52,9 @@ export const model = [
     title: 'Simple Light',
     styles: {
       nav: {
+        display: 'flex',
+        'justify-content': 'space-between',
+        'align-items': 'center',
         color: 'black',
         'background-color': 'rgb(255, 255, 255)',
         height: '10vh',
@@ -92,6 +98,9 @@ export const model = [
     title: 'Simple Blue',
     styles: {
       nav: {
+        display: 'flex',
+        'justify-content': 'space-between',
+        'align-items': 'center',
         color: 'white',
         'background-color': 'blue',
         height: '10vh',
