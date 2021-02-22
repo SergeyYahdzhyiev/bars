@@ -7,29 +7,25 @@ export class Navbar {
     this.items = items;
   }
 
-  itemHoverHandler(event) {
-    event.target.style += css(this.styles.hover);
-  }
-
   itemsToHTML(items = []) {
     const html = items
       .map((item, index) => {
         if (index === 0) {
           return `
-              <li class="navbar-list-item active" style="${css(
-                this.styles.item
-              )};${css(
-            this.styles.active
-          )}" onmouseover="${this.itemHoverHandler(event)}">
+              <li id="${
+                this.id
+              }-link" class="navbar-list-item active" style="${css(
+            this.styles.item
+          )};${css(this.styles.active)}">
                 <a href="#" class="navbar-link" style="${css(
                   this.styles.link
                 )}">${item}</a>
               </li>`;
         } else {
           return `
-              <li class="navbar-list-item" style="${css(
-                this.styles.item
-              )}" onmouseover="${this.itemHoverHandler(event)}">
+              <li id="${this.id}-link" class="navbar-list-item" style="${css(
+            this.styles.item
+          )}">
                 <a href="#" class="navbar-link" style="${css(
                   this.styles.link
                 )}">${item}</a>
