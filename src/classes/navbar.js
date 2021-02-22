@@ -1,10 +1,35 @@
-import { css } from '../utils';
+import { css, property } from '../utils';
 
 export class Navbar {
   constructor(id, styles, items) {
     this.id = id;
     this.styles = styles;
     this.items = items;
+
+    this.handleHoverEnter = this.handleHoverEnter.bind(this);
+    this.handleHoverExit = this.handleHoverExit.bind(this);
+
+    this.init();
+  }
+
+  init() {
+    const container = document.querySelector('.navbar-container');
+    const navbar = this.toHTML();
+    container.innerHTML = navbar;
+
+    const links = document.querySelectorAll(`#${this.id}-link`);
+
+    links.forEach((link) => {
+      link.addEventListener('mouseover', this.handleHoverEnter);
+      link.addEventListener('mouseout', this.handleHoverExit);
+    });
+  }
+
+  handleHoverEnter(e) {
+    property('set', this.styles.hover, e);
+  }
+  handleHoverExit(e) {
+    property('remove', this.styles.hover, e);
   }
 
   itemsToHTML(items = []) {
