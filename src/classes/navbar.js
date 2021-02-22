@@ -1,22 +1,16 @@
 import { css, property } from '../utils';
 
 export class Navbar {
-  constructor(id, styles, items) {
-    this.id = id;
-    this.styles = styles;
-    this.items = items;
+  constructor(options) {
+    this.id = options.id;
+    this.styles = options.styles;
+    this.items = options.items;
 
     this.handleHoverEnter = this.handleHoverEnter.bind(this);
     this.handleHoverExit = this.handleHoverExit.bind(this);
-
-    this.init();
   }
 
   init() {
-    const container = document.querySelector('.navbar-container');
-    const navbar = this.toHTML();
-    container.innerHTML = navbar;
-
     const links = document.querySelectorAll(`#${this.id}-link`);
 
     links.forEach((link) => {
