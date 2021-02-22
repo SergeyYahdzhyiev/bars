@@ -51,7 +51,7 @@ nav {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-.bar-container {
+.navbar-section-container {
   display: flex;
   flex-direction: column;
 }

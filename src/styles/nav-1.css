@@ -45,11 +45,7 @@
   background-color: gray;
 }
 
-#nav-1 .burger-bar {
-  background: white;
-}
-
-#nav-1 .burger {
+/* #nav-1 .burger {
   padding: 0 1.5em;
   display: none;
   flex-direction: column;
@@ -60,10 +56,11 @@
   z-index: 1;
 }
 #nav-1 .burger-bar {
+  background: white;
   width: 20px;
   height: 2px;
   z-index: 0;
-}
+} */
 
 @media only screen and (max-width: 768px) {
   #nav-1 {
@@ -83,10 +80,10 @@
   #nav-1 .navbar-list-item {
     height: 24px;
   }
-  #nav-1 .burger {
+  /* #nav-1 .burger {
     display: flex;
   }
   #nav-1.open {
     height: calc(10vh + (24px * 3));
-  }
+  } */
 }
