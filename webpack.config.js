@@ -2,6 +2,7 @@ const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const CSSMinimizer = require('css-minimizer-webpack-plugin');
 const CSSExtract = require('mini-css-extract-plugin');
+const FaviconPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -9,7 +10,7 @@ module.exports = {
   output: {
     filename: '[name].[chunkhash].bundle.js',
     path: path.resolve(__dirname, 'build'),
-    clear: true,
+    clean: true,
   },
   optimization: {
     minimize: true,
@@ -20,13 +21,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: [CSSExtract.loader, 'css-loader'],
-      },
-      {
-        test: /\.ico$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/icons/[name][ext]',
-        },
       },
       {
         test: /\.woff(2)?$/,
@@ -41,6 +35,10 @@ module.exports = {
     new CSSExtract(),
     new HTMLPlugin({
       template: './index.html',
+    }),
+    new FaviconPlugin({
+      logo: './assets/favicon.ico',
+      prefix: 'assets/icons/',
     }),
   ],
   devServer: {
