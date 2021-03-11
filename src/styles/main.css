@@ -23,10 +23,6 @@ main {
   padding: 1em 0;
 }
 
-nav {
-  margin: 10px 0;
-}
-
 .main-title {
   flex: 2;
   font-weight: 300;
@@ -89,6 +85,41 @@ nav {
   outline: none;
 }
 
+.modal {
+  display: none;
+  z-index: -1;
+}
+
+.modal.open {
+  display: initial;
+  z-index: 1;
+}
+
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  animation: fade-in 300ms ease-in;
+}
+.modal-window {
+  width: 400px;
+  height: 400px;
+  max-height: 80%;
+  padding: 1em;
+  background: #fff;
+  z-index: 2;
+  animation: slide-down 300ms ease-in;
+}
+.modal-col {
+  flex: 1;
+  overflow-y: scroll;
+}
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 12px;
@@ -130,5 +161,23 @@ nav {
   }
   .header-text {
     text-align: center;
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

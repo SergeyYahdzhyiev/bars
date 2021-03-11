@@ -5,6 +5,7 @@ const CSSExtract = require('mini-css-extract-plugin');
 const FaviconPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   context: path.resolve(__dirname, 'src'),
   entry: './index.js',
   output: {
@@ -42,6 +43,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    posrt: 3000,
+    contentBase: path.resolve(__dirname, 'build'),
+    port: 3000,
   },
 };
