@@ -44,6 +44,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
-    port: 3000,
+    port: 4200,
   },
 };
