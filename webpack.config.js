@@ -9,7 +9,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './index.js',
   output: {
-    filename: '[name].[chunkhash].bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
