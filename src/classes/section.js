@@ -19,10 +19,29 @@ export class Section {
 
     const $section = document.getElementById(this.id);
     const srcBtn = $section.querySelector('.get-code-btn');
+    const navLinks = $section.querySelectorAll('.nav-list-item');
 
     srcBtn.addEventListener('click', () => {
+      const $htmlPre = document.getElementById('src-html');
+      const $cssPre = document.getElementById('src-css');
+      const $copyBtns = document.querySelectorAll('.modal-col span');
+
+      $htmlPre.textContent = this.navbar.getHTML();
+      $cssPre.textContent = this.navbar.getStyles().replace(/#nav-\d+ /g, '');
+
+      $copyBtns[0].setAttribute('data-clipboard-text', $htmlPre.textContent);
+      $copyBtns[1].setAttribute('data-clipboard-text', $cssPre.textContent);
+
       document.querySelector('.modal').classList.add('open');
     });
+
+    navLinks.forEach((link) =>
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        navLinks.forEach((link) => link.classList.remove('active'));
+        e.target.parentNode.classList.add('active');
+      })
+    );
   }
 
   appendStyles() {

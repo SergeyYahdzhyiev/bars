@@ -108,17 +108,58 @@ main {
   animation: fade-in 300ms ease-in;
 }
 .modal-window {
-  width: 400px;
+  display: flex;
   height: 400px;
   max-height: 80%;
   padding: 1em;
   background: #fff;
+  box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.2);
   z-index: 2;
   animation: slide-down 300ms ease-in;
 }
 .modal-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
+  margin: 0.5rem;
+  padding: 1rem;
+  max-width: max-content;
+  border: 1px solid rgb(78, 78, 194);
+  background-color: #eee;
+}
+.modal-col span {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 45px;
+  width: max-content;
+  margin-left: auto;
+  cursor: pointer;
+}
+/* .modal-col span::before {
+  content: 'Click to Copy';
+  width: max-content;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  font-size: 10px;
+  display: none;
+  color: #000;
+}
+.modal-col span:hover:before {
+  display: block;
+} */
+.modal-col span:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-col span:active {
+  transform: scale(0.9);
 }
 @media only screen and (max-width: 1024px) {
   body {

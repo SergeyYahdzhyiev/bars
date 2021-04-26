@@ -4,10 +4,21 @@ import { model } from './model';
 
 model.forEach((block) => block.init());
 
-const modal = document.querySelector('.modal');
+const $modal = document.querySelector('.modal');
+const $copyBtns = document.querySelectorAll('.modal-col span');
 
-modal.addEventListener('click', (e) => {
+new ClipboardJS($copyBtns);
+
+$modal.addEventListener('click', (e) => {
   if (e.target.dataset.close) {
-    modal.classList.remove('open');
+    $modal.classList.remove('open');
   }
 });
+
+$copyBtns.forEach((btn) =>
+  btn.addEventListener('click', (e) => {
+    const btnText = e.target.textContent;
+    e.target.textContent = 'Copied';
+    setTimeout(() => (e.target.textContent = btnText), 1500);
+  })
+);

@@ -38,20 +38,20 @@ export class SimpleNavbar extends Navbar {
 
   getHTML() {
     return `
-          <nav class="nav">
-            <div class="logo">[ LOGO ]</div>
-            <ul class="nav-list">
-              <li class="nav-list-item active">
-                <a href="#" class="nav-link">Home</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-link">Contacts</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-link">About</a>
-              </li>
-            </ul>
-          </nav>
+<nav class="nav">
+  <div class="logo">[ LOGO ]</div>
+  <ul class="nav-list">
+    <li class="nav-list-item active">
+      <a href="#" class="nav-link">Home</a>
+    </li>
+    <li class="nav-list-item">
+      <a href="#" class="nav-link">Contacts</a>
+    </li>
+    <li class="nav-list-item">
+      <a href="#" class="nav-link">About</a>
+    </li>
+  </ul>
+</nav>
           `;
   }
 }
