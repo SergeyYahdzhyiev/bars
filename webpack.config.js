@@ -37,10 +37,6 @@ module.exports = {
     new HTMLPlugin({
       template: './index.html',
     }),
-    new FaviconPlugin({
-      logo: './assets/favicon.ico',
-      prefix: 'assets/icons/',
-    }),
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),

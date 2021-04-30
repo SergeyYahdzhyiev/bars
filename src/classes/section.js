@@ -11,11 +11,15 @@ export class Section {
     this.navbar = this.types[options.type];
   }
 
-  init() {
+  #render() {
     const main = document.querySelector('main');
 
     main.insertAdjacentHTML('beforeend', this.toHTML());
     this.appendStyles();
+  }
+
+  init() {
+    this.#render();
 
     const $section = document.getElementById(this.id);
     const srcBtn = $section.querySelector('.get-code-btn');
