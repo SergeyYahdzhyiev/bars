@@ -6,11 +6,11 @@ export class Navbar {
     this.styles = options.styles;
   }
 
-  getStyles() {
+  get css() {
     throw new Error('Method getStyles must be realized!');
   }
 
-  getHTML() {
+  get html() {
     throw new Error('Method toHTML must be realized!');
   }
 }
@@ -20,7 +20,7 @@ export class SimpleNavbar extends Navbar {
     super(options);
   }
 
-  getStyles() {
+  get css() {
     return `#${this.id} .nav {\n\t${parseStyles(this.styles.nav)}\n}\n#${
       this.id
     } .logo {\n\t${parseStyles(this.styles.logo)}\n}\n#${
@@ -36,7 +36,7 @@ export class SimpleNavbar extends Navbar {
     } .nav-list-item.active {\n\t${parseStyles(this.styles.hover)}\n}\n`;
   }
 
-  getHTML() {
+  get html() {
     return `
 <nav class="nav">
   <div class="logo">[ LOGO ]</div>
@@ -53,5 +53,15 @@ export class SimpleNavbar extends Navbar {
   </ul>
 </nav>
           `;
+  }
+
+  get handler() {
+    return (e) => {
+      e.preventDefault();
+      document
+        .querySelectorAll(`#${this.id} .nav-list-item`)
+        .forEach((link) => link.classList.remove('active'));
+      e.target.parentNode.classList.add('active');
+    };
   }
 }

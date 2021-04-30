@@ -2,7 +2,6 @@ const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const CSSMinimizer = require('css-minimizer-webpack-plugin');
 const CSSExtract = require('mini-css-extract-plugin');
-const FaviconPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -19,6 +18,16 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
       {
         test: /\.css$/,
         use: [CSSExtract.loader, 'css-loader'],
