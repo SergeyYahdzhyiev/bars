@@ -1,9 +1,10 @@
-import { SimpleNavbar } from './navbar';
+import { DropdownNavbar, SimpleNavbar } from './navbar';
 
 export class Section {
   constructor(options) {
     this.types = {
       simple: new SimpleNavbar(options),
+      dropdown: new DropdownNavbar(options),
     };
 
     this.id = options.id;

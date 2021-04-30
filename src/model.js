@@ -451,4 +451,88 @@ export const model = [
     },
     items: ['Home', 'Contacts', 'About'],
   }),
+  new Section({
+    id: 'nav-11',
+    title: 'Dropdown Dark',
+    type: 'dropdown',
+    styles: {
+      nav: {
+        display: 'flex',
+        'justify-content': 'space-between',
+        'align-items': 'center',
+        color: 'white',
+        'background-color': 'rgb(0, 0, 0)',
+        height: '10vh',
+        margin: '1em 0',
+      },
+      logo: {
+        'font-size': '24px',
+        'letter-spacing': '2px',
+        'padding-left': '1.5em',
+      },
+      list: {
+        display: 'flex',
+        'justify-content': 'space-around',
+        height: '100%',
+      },
+      item: {
+        display: 'flex',
+        'align-items': 'center',
+        padding: '0 1.5rem',
+        transition: 'background-color 200ms',
+      },
+      link: {
+        'flex-direction': 'column',
+        'align-items': 'center',
+        'justify-content': 'center',
+        display: 'flex',
+        padding: '0 .5em',
+        'font-size': '16px',
+        'text-decoration': 'none',
+        color: 'white',
+        cursor: 'pointer',
+      },
+      hover: {
+        'background-color': 'gray',
+      },
+      dropdown: {
+        item: {
+          display: 'flex',
+          position: 'relative',
+        },
+        icon: {
+          'margin-left': ' 0.5rem',
+          'font-weight': 'bold',
+          transition: 'transform 300ms',
+        },
+        content: {
+          display: 'none',
+          'flex-direction': 'column',
+          position: 'absolute',
+          left: 0,
+          top: '10vh',
+          width: '100%',
+          height: 'max-content',
+          'background-color': 'black',
+          animation: 'slide 300ms ease',
+        },
+      },
+      keyframes: {
+        name: 'silde',
+        from: {
+          opacity: 0,
+          transform: 'translateY(-60px)',
+        },
+        to: {
+          opacity: 1,
+          transform: 'translateY(0)',
+        },
+      },
+    },
+    items: ['Home', 'Contacts', 'About'],
+    dropdown: {
+      title: 'Dropdown',
+      items: ['Media', 'Downloads'],
+    },
+  }),
 ];
