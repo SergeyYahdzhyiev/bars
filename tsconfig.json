@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["clipboard"],
+    // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
+    // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
+    "sourceMap": true,
+    // "outFile": "./",                             /* Concatenate and emit output to single file. */
+    // "outDir": "./",                              /* Redirect output structure to the directory. */
+    "rootDir": "./src",
+    "removeComments": true,
+    "strict": true,
+    // "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["build/", "node_modules/"]
+}
