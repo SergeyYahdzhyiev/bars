@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
