@@ -474,6 +474,7 @@ export const model = [
         display: 'flex',
         'justify-content': 'space-around',
         height: '100%',
+        padding: '0 1em',
       },
       item: {
         display: 'flex',
@@ -512,6 +513,7 @@ export const model = [
           left: 0,
           top: '10vh',
           width: '100%',
+          padding: 0,
           height: 'max-content',
           'background-color': 'black',
           animation: 'slide 300ms ease',
