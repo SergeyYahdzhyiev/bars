@@ -143,19 +143,6 @@ main {
   margin-left: auto;
   cursor: pointer;
 }
-/* .modal-col span::before {
-  content: 'Click to Copy';
-  width: max-content;
-  position: absolute;
-  top: -15px;
-  right: 0;
-  font-size: 10px;
-  display: none;
-  color: #000;
-}
-.modal-col span:hover:before {
-  display: block;
-} */
 .modal-col span:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
