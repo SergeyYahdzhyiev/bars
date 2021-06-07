@@ -47,12 +47,21 @@ module.exports = {
           filename: 'assets/fonts/[name][ext]',
         },
       },
+      {
+        test: /\.ico$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
+      },
     ],
   },
   plugins: [
     new CSSExtract(),
     new HTMLPlugin({
       template: './index.html',
+      inject: 'body',
+      favicon: 'assets/favicon.ico',
     }),
   ],
   devServer: {
