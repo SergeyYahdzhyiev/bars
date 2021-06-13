@@ -149,6 +149,22 @@ main {
 .modal-col span:active {
   transform: scale(0.9);
 }
+footer {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-evenly;
+
+  color: #fff;
+
+  height: 80px;
+
+  border-top: 3px solid #fff;
+
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3),
+    inset 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 12px;
