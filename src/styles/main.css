@@ -149,6 +149,50 @@ main {
 .modal-col span:active {
   transform: scale(0.9);
 }
+footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+
+  justify-content: space-evenly;
+
+  color: #fff;
+
+  min-height: 100px;
+
+  border-top: 3px solid #fff;
+
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3),
+    inset 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.social,
+.techs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.social h5,
+.techs h5 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.techs-icons {
+  display: flex;
+  align-items: center;
+}
+.ts {
+  margin: 0 5px;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.links a,
+.techs-icons i {
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 12px;
